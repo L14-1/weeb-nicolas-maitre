@@ -1,10 +1,14 @@
-import { createFileRoute } from "@tanstack/react-router";
-import { ComponentExample } from "@/components/component-example";
+import { Cta } from '@/components/home/cta'
+import { Spotlight } from '@/components/ui/spotlight-new'
+import { createFileRoute } from '@tanstack/react-router'
 
-export const Route = createFileRoute("/")({ component: App });
+export const Route = createFileRoute('/')({ component: App })
 
 function App() {
-return (
-  <ComponentExample />
-);
+  return (
+    <main className="mx-auto w-5xl max-w-full pt-60">
+      <Spotlight />
+      <Cta />
+    </main>
+  )
 }
