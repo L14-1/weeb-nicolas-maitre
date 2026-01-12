@@ -36,7 +36,7 @@ function RootDocument({ children }: { children: React.ReactNode }) {
       <head>
         <HeadContent />
       </head>
-      <body>
+      <body className="overflow-x-hidden">
         <Header />
         {children}
         <TanStackDevtools
