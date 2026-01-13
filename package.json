@@ -9,6 +9,7 @@
     "test": "vitest run",
     "lint": "eslint",
     "format": "prettier",
+    "start": "node .output/server/index.mjs",
     "check": "prettier --write . && eslint --fix"
   },
   "dependencies": {
