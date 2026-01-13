@@ -1,9 +1,9 @@
-import { Header } from '@/components/layout/header'
 import { TanStackDevtools } from '@tanstack/react-devtools'
 import { HeadContent, Scripts, createRootRoute } from '@tanstack/react-router'
 import { TanStackRouterDevtoolsPanel } from '@tanstack/react-router-devtools'
 
 import Footer from '@/components/layout/footer'
+import { Header } from '@/components/layout/header'
 import { Toaster } from '@/components/ui/sonner'
 import { Spotlight } from '@/components/ui/spotlight-new'
 import appCss from '../styles.css?url'
@@ -39,9 +39,9 @@ function RootDocument({ children }: { children: React.ReactNode }) {
       <head>
         <HeadContent />
       </head>
-      <body className="overflow-x-hidden pt-60">
+      <body className="overflow-x-hidden">
         <Header />
-        <main className="px-4 lg:px-0">{children}</main>
+        <main className="px-4 lg:px-0  pt-30">{children}</main>
         <Footer />
         <TanStackDevtools
           config={{
