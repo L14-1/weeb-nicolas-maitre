@@ -1,3 +1,22 @@
-# TanStack Start + shadcn/ui
+# Weeb Frontend
 
-This is a template for a new TanStack Start project with React, TypeScript, and shadcn/ui.
+Application web développée avec TanStack Start, React, TypeScript et shadcn/ui.
+
+## Environnements
+
+- **Staging**: https://weeb.nicolasmaitre.dev
+
+## Workflow Git
+
+Le projet utilise trois branches principales :
+
+1. **dev** - Branche de développement
+2. **staging** - Branche de pré-production
+3. **main** - Branche de production
+
+### Processus de déploiement
+
+1. Créer une branche de feature depuis `dev`
+2. Faire une PR vers `dev`
+3. De `dev`, faire une PR vers `staging`
+4. De `staging`, faire une PR vers `main`
