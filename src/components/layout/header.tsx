@@ -9,12 +9,8 @@ import LoginButton from './login-button'
 
 export const navLinks = [
   {
-    label: 'A propos',
-    href: '/',
-  },
-  {
     label: 'Nous contacter',
-    href: contactRoute.to,
+    route: contactRoute,
   },
 ]
 
@@ -47,7 +43,7 @@ export function Header() {
             {navLinks.map((link, i) => (
               <Link
                 className={buttonVariants({ variant: 'ghost' })}
-                to={link.href}
+                to={link.route.to}
                 key={i}
               >
                 {link.label}
