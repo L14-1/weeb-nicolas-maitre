@@ -1,16 +1,14 @@
-import { init } from '@plausible-analytics/tracker'
-import { useEffect } from 'react'
-
 export default function Analytics() {
-  useEffect(() => {
-    if (process.env.ORIGIN_URL && process.env.ANALYTICS_URL) {
+  const domain = import.meta.env.VITE_ORIGIN_URL
+  const endpoint = import.meta.env.VITE_ANALYTICS_URL
+  if (domain && endpoint) {
+    import('@plausible-analytics/tracker').then(({ init }) => {
       init({
-        domain: process.env.ORIGIN_URL!,
-        endpoint: process.env.ANALYTICS_URL,
-        captureOnLocalhost: true,
+        domain,
+        endpoint,
       })
-    }
-  }, [])
+    })
+  }
 
   return null
 }
