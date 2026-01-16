@@ -1,7 +1,13 @@
 import { TanStackDevtools } from '@tanstack/react-devtools'
-import { HeadContent, Scripts, createRootRoute } from '@tanstack/react-router'
+import {
+  ClientOnly,
+  HeadContent,
+  Scripts,
+  createRootRoute,
+} from '@tanstack/react-router'
 import { TanStackRouterDevtoolsPanel } from '@tanstack/react-router-devtools'
 
+import Analytics from '@/components/Analytics'
 import Footer from '@/components/layout/footer'
 import { Header } from '@/components/layout/header'
 import { Toaster } from '@/components/ui/sonner'
@@ -56,6 +62,9 @@ function RootDocument({ children }: { children: React.ReactNode }) {
         />
         <Spotlight />
         <Toaster />
+        <ClientOnly>
+          <Analytics />
+        </ClientOnly>
         <Scripts />
       </body>
     </html>
